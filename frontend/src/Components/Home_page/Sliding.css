@@ -1,0 +1,39 @@
+/* @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-200%);
+      }
+    }
+  }
+  
+  .animate-slide {
+    animation: slide 20s linear infinite;
+  }
+   */
+
+
+   @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .animate-slide {
+    animation: slide 3s linear infinite;
+  }
+  

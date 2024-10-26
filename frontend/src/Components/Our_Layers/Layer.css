@@ -1,0 +1,41 @@
+.container {
+    position: relative;
+    padding-bottom: 3rem; /* Adjust this value if needed to create space for the footer */
+  }
+  
+  .vertical-bar {
+    height: 980px;
+    width: 4px;
+    background-color: #3182ce;
+  }
+  
+  .layer-card {
+    position: relative;
+    width: calc(50% - 20px);
+    margin-bottom: 2rem;
+  }
+  
+  .left-side {
+    margin-right: 30%;
+    transform: translateX(8%);
+    width:100%;
+  }
+  
+  .right-side {
+    margin-left: 32%;
+    transform: translateX(20%);
+    width:100%;
+  }
+  
+  @media (max-width: 768px) {
+    .layer-card {
+      width: 100%;
+      transform: none !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+    .vertical-bar {
+      display: none;
+    }
+  }
+  

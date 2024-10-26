@@ -1,0 +1,90 @@
+/* Container for Offerings Section */
+.offerings-container {
+    padding: 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.offerings-container h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.offerings-container h3 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+/* Grid for Offerings */
+.offerings-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Column Styling */
+.offering-column {
+    flex: 1;
+    min-width: 280px;
+    max-width: 300px;
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offering-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.column-header {
+    background-color: #333;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    border-radius: 5px 5px 0 0;
+}
+
+.offering-column p {
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+}
+
+/* List styling for sub sections */
+.considered-list {
+    text-align: left;
+    list-style: none;
+    padding-left: 0;
+}
+
+.considered-list li {
+    font-size: 1rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .offerings-grid {
+        flex-direction: column;
+    }
+
+    .offering-column {
+        max-width: 100%;
+    }
+}

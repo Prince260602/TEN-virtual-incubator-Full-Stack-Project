@@ -1,0 +1,63 @@
+/* Container for both text and image sections */
+.incubator-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;  /* Ensures responsiveness */
+  }
+  
+  .text-section {
+    flex: 2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    font-weight:300;
+    font-size:medium;
+    
+  }
+  
+  .image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-section img {
+    margin-left: 50px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds some depth */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .incubator-container {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .text-section {
+      font-size: 1rem;
+      text-align: center;
+    }
+  
+    .image-section {
+      margin-top: 1rem;
+      translate: -25px;
+      
+      
+    }
+  
+    .image-section img {
+      width: 80%; /* Make image slightly smaller for mobile */
+    }
+  }
+  

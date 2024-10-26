@@ -116,7 +116,7 @@ function SignUp() {
       return;
     }
     axios
-      .post("http://localhost:4000/api/users/register", { username, email, password })
+      .post("https://virtual-or4y.onrender.com/api/users/register", { username, email, password })
       .then((response) => {
         if (response.status === 201) {
           toast.success("User added successfully! Now you need to Login.");

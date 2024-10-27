@@ -9,7 +9,8 @@ const CourseDetails = () => {
   const { id } = useParams();
  
   useEffect(()=>{
-    axios.get(`https://ten-official-1.onrender.com/api/users/coursedetails/${id}`)
+    // axios.get(`https://ten-official-1.onrender.com/api/users/coursedetails/${id}`)
+    axios.get(`http://localhost:4000/api/users/coursedetails/${id}`)
     .then((res)=>SetCourse(res.data.courseDetails))
     .catch((Err)=>console.log(Err))
   },[id])

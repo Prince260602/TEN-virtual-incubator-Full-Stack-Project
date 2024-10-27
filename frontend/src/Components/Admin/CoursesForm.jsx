@@ -149,7 +149,8 @@ function CourseForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://ten-official-1.onrender.com/api/users/course", formData);
+      // const response = await axios.post("https://ten-official-1.onrender.com/api/users/course", formData);
+      const response = await axios.post("http://localhost:4000/api/courses/course", formData);
       if (response.status === 201) {
         toast.success("Course added successfully!");
       } else {

@@ -7,7 +7,8 @@ export const NamePage = () => {
   const {id} = useParams()
   console.log(id);
   useEffect(()=>{
-      axios.get(`https://ten-official-1.onrender.com/api/users/userbyId/${id}`)
+      // axios.get(`https://ten-official-1.onrender.com/api/users/userbyId/${id}`)
+      axios.get(`http://localhost:4000/api/users/userbyId/${id}`)
       .then((res)=>setName(res.data.data.username))
       .catch((error)=>console.log(error))
   },[])

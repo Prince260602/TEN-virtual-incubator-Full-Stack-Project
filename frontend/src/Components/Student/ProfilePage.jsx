@@ -10,7 +10,8 @@ function Profile() {
 
   useEffect(() => {
     axios
-      .get(`https://ten-official-1.onrender.com/api/users/userbyId/${id}`)
+      // .get(`https://ten-official-1.onrender.com/api/users/userbyId/${id}`)
+      .get(`http://localhost:4000/api/users/userbyId/${id}`)
       .then((res) => {
         setUser(res.data.data);
         setLoading(false);

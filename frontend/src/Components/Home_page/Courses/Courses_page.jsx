@@ -122,7 +122,8 @@ const Courses = () => {
   }, []); 
   useEffect(()=>{
     setTimeout(()=>{
-      axios.get("https://ten-official-1.onrender.com/api/users/courses")
+      // axios.get("https://ten-official-1.onrender.com/api/users/courses")
+      axios.get("http://localhost:4000/api/users/courses")
      .then((res)=> setcourses(res.data.data))
       // setcourses(res) 
      .catch((err)=>console.log(err))

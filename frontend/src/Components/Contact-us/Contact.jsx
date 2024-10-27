@@ -39,7 +39,8 @@ const Contactus = () => {
     setLoading(true);
     const toastId = toast.loading("Loading...")
     try {
-      const res = await axios.post("https://ten-official-1.onrender.com/api/users/contact", formData);
+      // const res = await axios.post("https://ten-official-1.onrender.com/api/users/contact", formData);
+      const res = await axios.post("http://localhost:4000/api/contacts/contact", formData);
 
       toast.success("Email Sent Successfully")
 

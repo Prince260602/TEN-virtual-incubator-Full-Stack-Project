@@ -58,7 +58,8 @@ function Students() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    axios.get('https://ten-official-1.onrender.com/api/users/allusers')
+    // axios.get('https://ten-official-1.onrender.com/api/users/allusers')
+    axios.get('http://localhost:4000/api/users/allusers')
       .then((res) => {
         console.log(res.data.data);
         setUsers(res.data.data);

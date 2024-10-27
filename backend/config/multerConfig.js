@@ -1,83 +1,18 @@
-// // // import multer from 'multer';
-// // // import path from 'path';
+// config/multer.js
+import multer from 'multer';
+import path from 'path';
 
-// // // // Set up multer storage
-// // // const storage = multer.diskStorage({
-// // //   destination: (req, file, cb) => {
-// // //     cb(null, 'uploads/'); // Directory for uploaded files
-// // //   },
-// // //   filename: (req, file, cb) => {
-// // //     cb(null, `${Date.now()}-${file.originalname}`); // Unique filename
-// // //   }
-// // // });
+// Define storage for the uploaded files
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'uploads/'); // Ensure this folder exists
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + path.extname(file.originalname)); // Append timestamp to avoid filename collisions
+  },
+});
 
-// // // // Initialize multer
-// // // const upload = multer({ storage });
+// Create a multer instance
+const upload = multer({ storage });
 
-// // // export { upload };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // import multer from 'multer';
-// // import path from 'path';
-
-// // // Set up multer storage
-// // const storage = multer.diskStorage({
-// //   destination: (req, file, cb) => {
-// //     cb(null, 'uploads/'); // Set upload folder
-// //   },
-// //   filename: (req, file, cb) => {
-// //     cb(null, `${Date.now()}-${file.originalname}`); // Set a unique filename
-// //   }
-// // });
-
-// // // Initialize multer for handling single file uploads
-// // const upload = multer({ storage });
-
-// // export { upload };
-
-// import multer from 'multer';
-// import path from 'path';
-
-// // Set up multer storage
-// const storage = multer.diskStorage({
-//   destination: (req, file, cb) => {
-//     cb(null, 'uploads/'); // Directory for uploaded files
-//   },
-//   filename: (req, file, cb) => {
-//     cb(null, `${Date.now()}-${file.originalname}`); // Unique filename
-//   }
-// });
-
-// // Initialize multer
-// const upload = multer({ storage });
-
-// export { upload };
+export default upload;
